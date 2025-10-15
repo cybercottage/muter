@@ -17,6 +17,11 @@
 </head>
 <body>
 
+<?php
+require_once("./header.php");
+//echo "$uexten";
+?>
+
     <div id="status-container">
         <img src="unmute.png" alt="Unmuted" id="statusImage">
     </div>
@@ -24,7 +29,7 @@
     <form id="controlForm">
         <div class="form-group">
             <label for="number">Extension Number:</label>
-            <input type="text" id="number" name="number" placeholder="Enter number..." required>
+            <input type="text" id="number" name="number" value="<?php echo $uexten; ?>" required>
         </div>
 
         <div class="form-group">
@@ -39,7 +44,7 @@
             <label for="party">Audio Channel:</label>
             <select id="party" name="party">
                 <option value="both">Both</option>
-                <option value="caller">Caller</option>
+		<option value="caller">Caller</option>
                 <option value="callee">Called</option>
             </select>
         </div>

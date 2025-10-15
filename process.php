@@ -1,5 +1,10 @@
 <?php
 // ==== CONFIGURATION ==== //
+
+//comment out line below if using direct from crm etc as it forces login otherwise
+require_once("./header.php");
+
+
 require 'muteconfig.php';
 
 $extension = $_POST['number']; //$_GET["name"]
@@ -7,6 +12,8 @@ $mode = $_POST['party']; //$_GET["name"]
 $mute = $_POST['action']; //$_GET["name"]
 $dir = $_POST['party']; //$_GET["name"]
 $muted = $_POST['action']; //$_GET["name"]
+
+
 
 if ($muted == mute){
     $mute = "1";
@@ -23,6 +30,7 @@ if ($dir=="caller"){
 }else{
     $mode = "both";
 }
+
 
 // ==== CONNECT TO AMI ==== //
 $socket = fsockopen($ami_host, $ami_port, $errno, $errstr, 3);
@@ -140,3 +148,4 @@ function read_response($socket)
     return $out;
 }
 ?>
+
