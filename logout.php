@@ -5,7 +5,6 @@
  *
  * Uses PHP SESSIONS, modern password-hashing and salting and gives the basic functions a proper login system needs.
  *
- * @license http://opensource.org/licenses/MIT MIT License
  */
 
 // checking for minimum PHP version
