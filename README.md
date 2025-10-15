@@ -7,3 +7,5 @@ muter.php is the file the user loads and enters their extension number in the bo
 Sucessful muting will change teh mic icon and update the response box
 
 failed muting will respond with "Recording (un)mute failed on 'extension' for 'legs' channels, No recording id active
+
+This version uses the freepbx user as the extension and password for logging in adding extra security
